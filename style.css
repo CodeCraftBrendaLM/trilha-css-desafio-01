@@ -1,0 +1,236 @@
+/* Estilização global aplicada a todos os elementos da página */
+* {
+    font-family: 'Raleway', sans-serif; /* Define a fonte padrão como Raleway, com fallback para fontes sans-serif */
+    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho total dos elementos */
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    text-align: center; /* Centraliza o texto por padrão */
+    
+    /* Importa a fonte Raleway do Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+.modules-list span {
+    color: #1472B7; /* Define a cor do texto dos elementos <span> dentro do contêiner com a classe "modules-list" */
+}
+
+.banner {
+    /* Define uma imagem de fundo com sobreposição de gradiente */
+    background-image: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.6), /* Gradiente preto semitransparente no topo */
+            rgba(49, 168, 221, 0.2), /* Gradiente azul claro semitransparente no meio */
+            rgba(0, 0, 0, 0.6) /* Gradiente preto semitransparente na base */
+        ), 
+        url(assets/images/banner.png); /* Adiciona a imagem de fundo */
+
+    background-color: black; /* Cor de fundo (mostrada se a imagem não carregar) */
+    background-size: cover; /* Faz a imagem de fundo cobrir todo o elemento */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo seja repetida */
+    height: 600px; /* Define a altura fixa do banner */
+    padding-top: 60px; /* Adiciona espaçamento interno na parte superior */
+    border-bottom: 1px solid #33A8DB80; /* Adiciona uma borda inferior com transparência */
+}
+
+
+.logo {
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 2.5rem; /* Define o tamanho da fonte do título como 2.5 vezes o tamanho base (geralmente 16px) */
+    font-weight: 900; /* Define o tamanho da fonte como extremamente grosso (negrito) */
+    text-transform: uppercase; /* Transforma todo o texto em letras maiúsculas */
+    color: transparent; /* Torna o texto transparente para que o gradiente de fundo apareça */
+    /* Aplica um gradiente como cor do texto */
+    background: -webkit-linear-gradient(#33A8DB, #1472B7); /* Gradiente de azul claro (#33A8DB) para azul escuro (#1472B7) */  
+    /* Faz com que o gradiente seja aplicado apenas ao texto */
+    background-clip: text; /* Para navegadores modernos */
+    -webkit-background-clip: text; /* Para compatibilidade com navegadores baseados em WebKit (ex.: Chrome, Safari) */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho do elemento */
+}
+
+
+.banner p {
+    font-size: 23px; /* Define o tamanho da fonte para o parágrafo como 23px */
+    text-align: center; /* Centraliza o texto dentro do parágrafo */
+    margin: 16px 0 24px; /* Define margens acima (16px), abaixo (24px) e nos lados (0px) */
+    color: white; /* Define a cor do texto como branco */
+    object-fit: fill; /* Faz com que o conteúdo (imagem ou vídeo) dentro do parágrafo ocupe completamente o espaço disponível (isso não afeta texto, mas pode ser útil para elementos de mídia) */
+}
+
+.banner button {
+    color: #31A8DD; /* Define a cor do texto (letra) do botão como um tom de azul claro */
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
+    font-weight: bold; /* Define o tamanho da fonte como negrito */
+    padding: 16px 32px; /* Adiciona 16px de espaçamento interno (padding) nas partes superior e inferior, e 32px nas laterais */
+    text-transform: uppercase; /* Transforma o texto do botão em letras maiúsculas */
+    letter-spacing: 4px; /* Aumenta o espaçamento entre as letras */ 
+    /* Define o fundo do botão como transparente */
+    background-color: transparent; 
+    /* Aplica um gradiente linear à borda do botão */
+    border-image: linear-gradient(#3BA1CD, #1572B7); /* Gradiente de azul claro (#3BA1CD) para azul escuro (#1572B7) */
+    border-image-slice: 10; /* Controla como o gradiente é cortado e distribuído ao longo das bordas */   
+    /* Arredonda os cantos do botão */
+    border-radius: 30px; /* Define os cantos do botão com um raio de 30px para torná-los arredondados */
+}
+
+#course-content {
+    background-color: black; /* Define o fundo da seção como preto */
+    background-size: cover; /* Faz com que a imagem de fundo (se houver) cubra completamente a área do elemento */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+    height: 600px; /* Define a altura da seção como 600px */
+    padding-top: 60px; /* Adiciona 60px de espaço interno na parte superior da seção */
+    border-bottom: 1px solid #33A8DB80; /* Adiciona uma borda inferior sutil, com uma cor azul translúcida (#33A8DB80) */
+}
+
+#course-content h2 {
+    text-align: center; /* Centraliza o texto do título horizontalmente */
+    text-transform: uppercase; /* Converte todo o texto para maiúsculas */
+    color: #33A8DB; /* Define a cor do texto como um tom de azul (#33A8DB) */
+    font-weight: bold; /* Define o tamanho da fonte como negrito */
+    font-size: 32px; /* Define o tamanho da fonte como 32px */
+    line-height: 37.57px; /* Define a altura da linha como 37.57px para um espaçamento confortável entre as linhas */
+    margin-top: 50px; /* Adiciona 50px de margem acima do título */
+    margin-bottom: 24px; /* Adiciona 24px de margem abaixo do título */
+    letter-spacing: 4px; /* Aumenta o espaçamento entre as letras para dar um efeito mais espaçado e legível */
+}
+
+
+#course-content p {
+    text-align: center; /* Centraliza o texto do parágrafo horizontalmente */
+    text-transform: none; /* Não aplica nenhuma transformação ao texto (mantém o texto conforme está) */
+    color: white; /* Define a cor do texto como branco */
+    font-weight: normal; /* Define o tamanho da fonte como normal (não negrito) */
+    font-size: 20px; /* Define o tamanho da fonte como 20px */
+    line-height: 30px; /* Define a altura da linha como 30px, o que melhora a legibilidade do texto */
+    align-items: center; /* A propriedade 'align-items' não tem efeito em elementos de bloco como 'p' */
+}
+
+.modules-list {
+    width: 892px; /* Define a largura da lista de módulos como 892px */
+    height: auto; /* Define a altura da lista de módulos como automática, ajustando-se ao conteúdo */
+    margin-top: 20px auto; /* Define 20px de margem superior e centraliza a lista horizontalmente */
+}
+
+.module {
+    width: 550px; /* Define a largura do módulo como 550px */
+    height: 53px; /* Define a altura do módulo como 53px */
+    padding: 16px 27px 14px 60px; /* Define o preenchimento interno: 16px acima, 27px à direita, 14px abaixo e 60px à esquerda */
+    opacity: 1; /* Define a opacidade do módulo como 1, o que significa totalmente opaco */
+    background: #252525; /* Define a cor de fundo como um tom de cinza escuro (#252525) */
+    color: white; /* Define a cor do texto como branca */
+    font-size: 18px; /* Define o tamanho da fonte como 18px */
+    font-weight: 100; /* Define o tamanho da fonte como 100 (mais leve que o normal) */
+    line-height: 18.78px; /* Define a altura da linha como 18.78px para um espaçamento confortável entre as linhas */
+    align-items: center; /* A propriedade 'align-items' não terá efeito aqui, pois é usada em layouts flexíveis */
+    border-radius: 25px; /* Adiciona bordas arredondadas com raio de 25px */
+    border: 2px solid #0056b3; /* Define a borda como 2px de espessura e azul (#0056b3) */
+    margin: 20px auto; /* Adiciona 20px de margem em cima e embaixo e centraliza horizontalmente */
+    letter-spacing: 0.05px; /* Adiciona um pequeno espaçamento entre as letras */
+}
+
+
+.module span {
+    background: #252525; /* Define a cor de fundo do span como #252525 (um tom escuro de cinza) */
+    font-family: Raleway; /* Define a fonte usada no texto como 'Raleway' */
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
+    font-weight: 400; /* Define o tamanho da fonte como 400 (peso normal, sem negrito) */
+    line-height: 18.78px; /* Define a altura da linha como 18.78px, proporcionando um espaçamento adequado entre as linhas de texto */
+    text-align: left; /* Alinha o texto à esquerda dentro do span */
+    text-underline-position: from-font; /* Controla a posição do sublinhado em relação à fonte (não é amplamente suportado em todos os navegadores) */
+    text-decoration-skip-ink: none; /* Define que o texto não deve "pular" o sublinhado, caso tenha um */
+    color: #0056b3; /* Define a cor do texto como um tom de azul (#0056b3) */
+}
+
+
+#transform-world {
+    background-image: url(assets/images/woman-code.png); /* Define uma imagem de fundo para o elemento, localizada no diretório 'assets/images/' */
+    background-color: black; /* Define a cor de fundo como preto*/
+    height: 560px; /* Define a altura do elemento como 560px */
+    background-size: cover; /* A imagem de fundo será redimensionada para cobrir todo o espaço do elemento, preservando a proporção */
+    background-attachment: fixed; /* Define que a imagem de fundo ficará fixa quando a página for rolada (não se moverá com o conteúdo) */
+    border-top: 1px solid #33A8DB80; /* Adiciona uma borda superior de 1px, com uma cor semi-transparente de azul */
+    border-bottom: 1px solid #33A8DB80; /* Adiciona uma borda inferior semelhante à borda superior */
+    padding: 200px; /* Adiciona 200px de espaçamento interno (padding) ao redor do conteúdo dentro do elemento */
+}
+
+
+#transform-world p {
+    text-transform: lowercase; /* Transforma todo o texto em minúsculas */
+    color: white; /* Define a cor do texto como branco */
+    font-weight: 900; /* Define o tamanho da fonte como 900 (negrito pesado) */
+    font-size: 2.5rem; /* Define o tamanho da fonte como 2.5rem (relativo ao tamanho da fonte raiz) */
+    max-width: 290px; /* Define a largura máxima do texto como 290px */
+    text-align: left; /* Alinha o texto à esquerda dentro do elemento */
+    text-shadow: 3px 2px #33A8DB; /* Aplica uma sombra ao texto, deslocada 3px à direita e 2px para baixo, com a cor azul #33A8DB */
+}
+
+#professional-challenges {
+    background-color: black;
+}
+
+#professional-challenges h2 {
+    font-size: 32px; /* Define o tamanho da fonte como 32px */
+    color: #33A8DB; /* Define a cor do texto como azul (#33A8DB) */
+    font-weight: bold; /* Define a fonte como negrito */
+    letter-spacing: 4px; /* Define o espaçamento entre as letras como 4px */
+    text-transform: uppercase; /* Transforma o texto em letras maiúsculas */
+    text-align: center; /* Alinha o texto no centro */
+    border-top: 100px solid black; /* Define uma borda superior de 100px de altura, cor preta */
+    border-left: 300px solid black; /* Define uma borda esquerda de 300px de largura, cor preta */
+    border-right: 300px solid black; /* Define uma borda direita de 300px de largura, cor preta */
+    border-bottom: 70px solid black; /* Define uma borda inferior de 70px de altura, cor preta */
+}
+
+
+#professional-challenges img {
+    width: 659px;
+    height: 429px;
+    top: 1685px;
+    left: 390px;
+}
+
+#professional-challenges p {
+color: white;
+size: 16px;
+font-weight: 400;
+line-height: 18.78px;
+text-align: center;
+border-top: 70px solid #000000;
+border-left: 300px solid #000000;
+border-right: 300px solid #000000;
+border-bottom: 100px solid #000000;
+max-width: 100%;
+}
+
+footer {
+    background-color: #000000;
+    border-top: 1px solid #33A8DB80
+}
+
+footer img {
+    border-top: 70px solid #000000;
+}
+
+footer p {
+    color: white; /* Define a cor do texto como branca */
+    border-bottom: 70px solid #000000; /* Adiciona uma borda inferior preta de 70px */
+    font-weight: 400; /* Define o tamanho da fonte como normal */
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
+    line-height: 18.78px; /* Define o espaçamento entre as linhas para melhorar a legibilidade */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+footer a {
+    color: #33A8DB; /* Define a cor do link como azul */
+    border-bottom: 70px solid #000000; /* Adiciona uma borda inferior preta de 70px */
+    font-weight: 700; /* Define o tamanho da fonte como semi-negrito */
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
+    line-height: 18.78px; /* Ajusta o espaçamento entre as linhas */
+    text-align: center; /* Centraliza o texto do link */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-weight: bold; /* Define o tamanho da fonte como negrito  */
+}
+
+
+
